@@ -42,3 +42,22 @@ def lotto_skipp(seed=0, jump=0, game=12):
 
         print(numbers)
 
+# power ball
+def powerball_powerhit(seed=0, jump=0, game=2):
+    if seed == 0:
+        random.seed()
+    else:
+        random.seed(seed)
+
+    for i in range(game):
+        numbers = []
+        for j in range(1000):
+            for i in range(jump):
+                continue
+            number = random.randint(1, 35)
+            if number not in numbers:
+                numbers.append(number)
+            if len(numbers) == 7:
+                break
+
+        print(numbers)
