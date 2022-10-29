@@ -19,3 +19,26 @@ def lotto_no_skipp(seed=0, game=12):
                 break
 
         print(numbers)
+
+
+
+# Lotto skipp
+def lotto_skipp(seed=0, jump=0, game=12):
+    if seed == 0:
+        random.seed()
+    else:
+        random.seed(seed)
+
+    for i in range(game):
+        numbers = []
+        for j in range(1000):
+            for i in range(jump):
+                continue
+            number = random.randint(1, 45)
+            if number not in numbers:
+                numbers.append(number)
+            if len(numbers) == 6:
+                break
+
+        print(numbers)
+
